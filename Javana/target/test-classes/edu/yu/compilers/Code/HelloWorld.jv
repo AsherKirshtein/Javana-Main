@@ -1,0 +1,6 @@
+Javana HelloWorld:
+
+@main()
+{
+    println("Hello, World!")
+}

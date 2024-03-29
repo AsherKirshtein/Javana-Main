@@ -1,0 +1,23 @@
+Javana TypeTestCase:
+
+@main()
+{
+    var type = "int"
+
+    if (type == "int")
+    {
+        println("Integer type selected.")
+    }
+    else if (type == "bool")
+    {
+        println("Boolean type selected.")
+    }
+    else if (type == "string")
+    {
+        println("String type selected.")
+    }
+    else
+    {
+        println("Unknown type.")
+    }
+}

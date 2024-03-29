@@ -1,0 +1,11 @@
+Javana TestProcedure:
+
+func printMessage() -> None
+{
+    println("This is a procedure.")
+}
+
+@main()
+{
+    printMessage()
+}

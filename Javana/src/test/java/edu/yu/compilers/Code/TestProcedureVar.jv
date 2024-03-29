@@ -1,0 +1,11 @@
+Javana TestProcedureVAR:
+
+func printNumber(num: int) -> None
+{
+    println("Number: " + num)
+}
+
+@main()
+{
+    printNumber(42)
+}
