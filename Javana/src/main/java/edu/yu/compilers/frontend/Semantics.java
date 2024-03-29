@@ -206,7 +206,7 @@ public class Semantics extends JavanaBaseVisitor<Object> {
 
     @Override
     public Object visitConstantDef(ConstantDefContext ctx) {
-        System.out.println("Visiting Constant definition " + ctx.getText());
+        //System.out.println("Visiting Constant definition " + ctx.getText());
         return super.visitConstantDef(ctx);
     }
 
@@ -254,7 +254,7 @@ public class Semantics extends JavanaBaseVisitor<Object> {
     @Override
     public Object visitType(TypeContext ctx)
     {
-        System.out.println("Visiting type " + ctx.getText());
+        //System.out.println("Visiting type " + ctx.getText());
         if (ctx.scalarType() != null)
         {
             return visitScalarType(ctx.scalarType());
@@ -293,6 +293,10 @@ public class Semantics extends JavanaBaseVisitor<Object> {
         } 
         else if (ctx.literal() != null) 
         {
+            if(ctx.literal().INTEGER() != null)
+            {
+                ctx.type = new Typespec(Typespec.Form.SCALAR);
+            }
             return visitLiteral(ctx.literal());
         } 
         else if (ctx.newArray() != null) 
@@ -316,7 +320,32 @@ public class Semantics extends JavanaBaseVisitor<Object> {
             } 
             else if (ctx.ARITH_OP() != null) 
             {
-                // Handle arithmetic operator
+                Object leftValue = visit(ctx.expression(0));
+                Object rightValue = visit(ctx.expression(1));
+                System.out.println(leftValue + " of " + ctx.getText());
+                if(leftValue == null || rightValue == null)
+                {
+                    error.flag(SemanticErrorHandler.Code.UNDECLARED_IDENTIFIER, ctx);
+                    return null;
+                }
+                int result = 0;
+                switch (ctx.ARITH_OP().getText()) 
+                {
+                    case "+":
+                        result = (Integer) leftValue + (Integer) rightValue;
+                        break;
+                    case "-":
+                        result = (Integer) leftValue - (Integer) rightValue;
+                        break;
+                    case "*":
+                        result = (Integer) leftValue * (Integer) rightValue;
+                        break;
+                    case "/":
+                        result = (Integer) leftValue / (Integer) rightValue;
+                        break;
+                }
+                ctx.type = new Typespec(Typespec.Form.SCALAR);
+                return result;
             } 
             else if (ctx.REL_OP() != null) 
             {
@@ -373,7 +402,7 @@ public class Semantics extends JavanaBaseVisitor<Object> {
     @Override
     public Object visitVariableDecl(VariableDeclContext ctx)
     {
-        System.out.println("Visiting variable Declaration " + ctx.getText());
+        System.out.println("Variable is getting declared!!! " + ctx.getText());
         JavanaParser.TypeAssocContext typeAssocCtx = ctx.typeAssoc();
         JavanaParser.TypeContext typeCtx = typeAssocCtx.type();
         JavanaParser.NameListContext nameListCtx = typeAssocCtx.nameList();

@@ -55,7 +55,7 @@ public class JavanaCC {
         var lexer = createLexer(sourceFileName, syntaxErrorHandler);
         if (lexer == null)
         {
-            System.out.println("Lexer finna be null nigga");
+            //System.out.println("Lexer finna be null nigga");
             System.exit(-1);
         }
         System.out.println("Working on the " + operation + " function now");
