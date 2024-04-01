@@ -222,8 +222,7 @@ public class JavanaParser extends Parser {
 		public ProgramHeaderContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override 
-		public int getRuleIndex() { return RULE_programHeader; }
+		@Override public int getRuleIndex() { return RULE_programHeader; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof JavanaVisitor ) return ((JavanaVisitor<? extends T>)visitor).visitProgramHeader(this);
@@ -1860,7 +1859,7 @@ public class JavanaParser extends Parser {
 	@SuppressWarnings("CheckReturnValue")
 	public static class ExpressionContext extends ParserRuleContext {
 		public Typespec type;
-		public List<ExpressionContext> expression() {
+        public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
 		}
 		public ExpressionContext expression(int i) {
@@ -2549,7 +2548,6 @@ public class JavanaParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class TypeContext extends ParserRuleContext {
-		public Typespec type;
 		public ScalarTypeContext scalarType() {
 			return getRuleContext(ScalarTypeContext.class,0);
 		}
@@ -3043,8 +3041,8 @@ public class JavanaParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class IdentifierContext extends ParserRuleContext {
-		public SymTableEntry entry; //Asher added this 
-		public TerminalNode IDENT() { return getToken(JavanaParser.IDENT, 0); }
+		public SymTableEntry entry;
+        public TerminalNode IDENT() { return getToken(JavanaParser.IDENT, 0); }
 		public IdentifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}

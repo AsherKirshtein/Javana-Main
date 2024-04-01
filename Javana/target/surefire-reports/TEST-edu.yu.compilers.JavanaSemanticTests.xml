@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="edu.yu.compilers.JavanaSemanticTests" time="1.914" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="edu.yu.compilers.JavanaSemanticTests" time="0.37" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="19"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/asherkirshtein/Desktop/coding_courses/Kirshtein_Asher_800610242/Javana/target/test-classes:/Users/asherkirshtein/Desktop/coding_courses/Kirshtein_Asher_800610242/Javana/target/classes:/Users/asherkirshtein/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/asherkirshtein/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/asherkirshtein/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/asherkirshtein/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/asherkirshtein/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/asherkirshtein/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/asherkirshtein/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/asherkirshtein/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/asherkirshtein/.m2/repository/org/apache/logging/log4j/log4j-core/2.19.0/log4j-core-2.19.0.jar:/Users/asherkirshtein/.m2/repository/org/apache/logging/log4j/log4j-api/2.19.0/log4j-api-2.19.0.jar:/Users/asherkirshtein/.m2/repository/org/antlr/antlr4-runtime/4.13.1/antlr4-runtime-4.13.1.jar:/Users/asherkirshtein/.m2/repository/org/json/json/20231013/json-20231013.jar:"/>
+    <property name="java.class.path" value="/Users/asherkirshtein/Desktop/JavanaRepo/Javana/target/test-classes:/Users/asherkirshtein/Desktop/JavanaRepo/Javana/target/classes:/Users/asherkirshtein/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/asherkirshtein/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/asherkirshtein/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/asherkirshtein/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/asherkirshtein/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/asherkirshtein/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/asherkirshtein/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/asherkirshtein/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/asherkirshtein/.m2/repository/org/apache/logging/log4j/log4j-core/2.19.0/log4j-core-2.19.0.jar:/Users/asherkirshtein/.m2/repository/org/apache/logging/log4j/log4j-api/2.19.0/log4j-api-2.19.0.jar:/Users/asherkirshtein/.m2/repository/org/antlr/antlr4-runtime/4.13.1/antlr4-runtime-4.13.1.jar:/Users/asherkirshtein/.m2/repository/org/json/json/20231013/json-20231013.jar:"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
@@ -12,10 +12,10 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-19.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/asherkirshtein/Desktop/coding_courses/Kirshtein_Asher_800610242/Javana/target/surefire/surefirebooter-20240328165147947_3.jar /Users/asherkirshtein/Desktop/coding_courses/Kirshtein_Asher_800610242/Javana/target/surefire 2024-03-28T16-51-47_829-jvmRun1 surefire-20240328165147947_1tmp surefire_0-20240328165147947_2tmp"/>
+    <property name="sun.java.command" value="/Users/asherkirshtein/Desktop/JavanaRepo/Javana/target/surefire/surefirebooter-20240401130136583_3.jar /Users/asherkirshtein/Desktop/JavanaRepo/Javana/target/surefire 2024-04-01T13-01-36_453-jvmRun1 surefire-20240401130136583_1tmp surefire_0-20240401130136583_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/Users/asherkirshtein/Desktop/coding_courses/Kirshtein_Asher_800610242/Javana/target/test-classes:/Users/asherkirshtein/Desktop/coding_courses/Kirshtein_Asher_800610242/Javana/target/classes:/Users/asherkirshtein/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/asherkirshtein/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/asherkirshtein/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/asherkirshtein/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/asherkirshtein/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/asherkirshtein/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/asherkirshtein/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/asherkirshtein/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/asherkirshtein/.m2/repository/org/apache/logging/log4j/log4j-core/2.19.0/log4j-core-2.19.0.jar:/Users/asherkirshtein/.m2/repository/org/apache/logging/log4j/log4j-api/2.19.0/log4j-api-2.19.0.jar:/Users/asherkirshtein/.m2/repository/org/antlr/antlr4-runtime/4.13.1/antlr4-runtime-4.13.1.jar:/Users/asherkirshtein/.m2/repository/org/json/json/20231013/json-20231013.jar:"/>
+    <property name="surefire.test.class.path" value="/Users/asherkirshtein/Desktop/JavanaRepo/Javana/target/test-classes:/Users/asherkirshtein/Desktop/JavanaRepo/Javana/target/classes:/Users/asherkirshtein/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/asherkirshtein/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/asherkirshtein/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/asherkirshtein/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/asherkirshtein/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/asherkirshtein/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/asherkirshtein/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/asherkirshtein/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/asherkirshtein/.m2/repository/org/apache/logging/log4j/log4j-core/2.19.0/log4j-core-2.19.0.jar:/Users/asherkirshtein/.m2/repository/org/apache/logging/log4j/log4j-api/2.19.0/log4j-api-2.19.0.jar:/Users/asherkirshtein/.m2/repository/org/antlr/antlr4-runtime/4.13.1/antlr4-runtime-4.13.1.jar:/Users/asherkirshtein/.m2/repository/org/json/json/20231013/json-20231013.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/asherkirshtein"/>
     <property name="user.language" value="en"/>
@@ -23,13 +23,13 @@
     <property name="java.version.date" value="2023-01-17"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-19.jdk/Contents/Home"/>
     <property name="file.separator" value="/"/>
-    <property name="basedir" value="/Users/asherkirshtein/Desktop/coding_courses/Kirshtein_Asher_800610242/Javana"/>
+    <property name="basedir" value="/Users/asherkirshtein/Desktop/JavanaRepo/Javana"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/asherkirshtein/Desktop/coding_courses/Kirshtein_Asher_800610242/Javana/target/surefire/surefirebooter-20240328165147947_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/asherkirshtein/Desktop/JavanaRepo/Javana/target/surefire/surefirebooter-20240401130136583_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="19.0.2+7-44"/>
@@ -44,7 +44,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/var/folders/0t/p20j789d4dxcs54ktlk3trlc0000gn/T/"/>
     <property name="java.version" value="19.0.2"/>
-    <property name="user.dir" value="/Users/asherkirshtein/Desktop/coding_courses/Kirshtein_Asher_800610242/Javana"/>
+    <property name="user.dir" value="/Users/asherkirshtein/Desktop/JavanaRepo/Javana"/>
     <property name="os.arch" value="x86_64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="native.encoding" value="UTF-8"/>
@@ -57,87 +57,70 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="63.0"/>
   </properties>
-  <testcase name="TestFunction" classname="edu.yu.compilers.JavanaSemanticTests" time="0.22">
+  <testcase name="TestFunction" classname="edu.yu.compilers.JavanaSemanticTests" time="0.052">
     <system-out><![CDATA[
 ==========Running Semantic check on TestFunction Test==============
 
 ==========End TestFunction Test==============
 ]]></system-out>
   </testcase>
-  <testcase name="TestIf" classname="edu.yu.compilers.JavanaSemanticTests" time="0.181">
+  <testcase name="TestIf" classname="edu.yu.compilers.JavanaSemanticTests" time="0.023">
     <system-out><![CDATA[
 ==========Running Semantic check on TestIf Test==============
 
 ==========End TestIf Test==============
 ]]></system-out>
   </testcase>
-  <testcase name="SimpleForLoopTest" classname="edu.yu.compilers.JavanaSemanticTests" time="0.176">
+  <testcase name="SimpleForLoopTest" classname="edu.yu.compilers.JavanaSemanticTests" time="0.037">
     <system-out><![CDATA[
 ==========Running Semantic check on SimpleForLoop Test==============
 
 ==========End SimpleForLoop Test==============
 ]]></system-out>
   </testcase>
-  <testcase name="TestCase" classname="edu.yu.compilers.JavanaSemanticTests" time="0.195">
+  <testcase name="TestCase" classname="edu.yu.compilers.JavanaSemanticTests" time="0.069">
     <system-out><![CDATA[
 ==========Running Semantic check on TestCase Test==============
-
-
-===== SYNTAX ERRORS =====
-
-Line Message                            
----- -------                            
-011  missing '{' at 'if'                
-015  missing '{' at 'if'                
-024  extraneous input '<EOF>' expecting {'(', 'func', 'record', '{', '}', 'decl', 'var', 'const', 'if', 'for', 'while', 'return', 'print', 'println', '!', '-', 'readch', 'readln', '@', IDENT, STRING, INTEGER, BOOL, 'None'}
 
 ==========End TestCase Test==============
 ]]></system-out>
   </testcase>
-  <testcase name="TypeTest" classname="edu.yu.compilers.JavanaSemanticTests" time="0.21">
+  <testcase name="TypeTest" classname="edu.yu.compilers.JavanaSemanticTests" time="0.034">
     <system-out><![CDATA[
 ==========Running Semantic check on TypeTest Test==============
-
-
-===== SYNTAX ERRORS =====
-
-Line Message                            
----- -------                            
-011  no viable alternative at input '@{'
-011  extraneous input ',' expecting {'(', 'func', 'record', '{', '}', 'decl', 'var', 'const', 'if', 'for', 'while', 'return', 'print', 'println', '!', '-', 'readch', 'readln', '@', IDENT, STRING, INTEGER, BOOL, 'None'}
 
 ==========End TypeTest Test==============
 ]]></system-out>
   </testcase>
-  <testcase name="TestProcedure" classname="edu.yu.compilers.JavanaSemanticTests" time="0.18">
+  <testcase name="TestProcedure" classname="edu.yu.compilers.JavanaSemanticTests" time="0.023">
     <system-out><![CDATA[
 ==========Running Semantic check on TestProcedure Test==============
 
 ==========End TestProcedure Test==============
 ]]></system-out>
   </testcase>
-  <testcase name="TestWhile" classname="edu.yu.compilers.JavanaSemanticTests" time="0.178">
+  <testcase name="TestWhile" classname="edu.yu.compilers.JavanaSemanticTests" time="0.024">
     <system-out><![CDATA[
 ==========Running Semantic check on TestWhile Test==============
 
 ==========End TestWhile Test==============
 ]]></system-out>
   </testcase>
-  <testcase name="HelloWorldTest" classname="edu.yu.compilers.JavanaSemanticTests" time="0.175">
+  <testcase name="HelloWorldTest" classname="edu.yu.compilers.JavanaSemanticTests" time="0.024">
     <system-out><![CDATA[
 ==========Running Semantic check on HelloWorld Test==============
 
 ==========End HelloWorld Test==============
 ]]></system-out>
   </testcase>
-  <testcase name="TestProcedureVar" classname="edu.yu.compilers.JavanaSemanticTests" time="0.182">
+  <testcase name="TestProcedureVar" classname="edu.yu.compilers.JavanaSemanticTests" time="0.025">
     <system-out><![CDATA[
 ==========Running Semantic check on TestProcedureVar Test==============
 
 ==========End TestProcedureVar Test==============
 ]]></system-out>
   </testcase>
-  <testcase name="SnowsTest" classname="edu.yu.compilers.JavanaSemanticTests" time="0.179">
+  <testcase name="SnowsTest" classname="edu.yu.compilers.JavanaSemanticTests" time="0.025">
     <system-out><![CDATA[
 ==========Running Semantic check on Snows Test==============
 

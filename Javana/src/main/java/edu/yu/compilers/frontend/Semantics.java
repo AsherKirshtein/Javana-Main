@@ -8,6 +8,8 @@ import antlr4.JavanaParser.CompositeTypeContext;
 import antlr4.JavanaParser.ConstantDefContext;
 import antlr4.JavanaParser.ExpressionContext;
 import antlr4.JavanaParser.ExpressionStatementContext;
+import antlr4.JavanaParser.ForStatementContext;
+import antlr4.JavanaParser.FunctionCallContext;
 import antlr4.JavanaParser.IdentifierContext;
 import antlr4.JavanaParser.LiteralContext;
 import antlr4.JavanaParser.MainArgContext;
@@ -15,6 +17,9 @@ import antlr4.JavanaParser.MainMethodContext;
 import antlr4.JavanaParser.NameDeclDefStatementContext;
 import antlr4.JavanaParser.NameDeclStatementContext;
 import antlr4.JavanaParser.NameListContext;
+import antlr4.JavanaParser.PrintArgumentContext;
+import antlr4.JavanaParser.PrintLineStatementContext;
+import antlr4.JavanaParser.PrintStatementContext;
 import antlr4.JavanaParser.ProgramHeaderContext;
 import antlr4.JavanaParser.ScalarTypeContext;
 import antlr4.JavanaParser.StatementContext;
@@ -226,13 +231,12 @@ public class Semantics extends JavanaBaseVisitor<Object> {
             if (variableEntry == null)
             {
                 variableEntry = symTableStack.enterLocal(variableName, SymTableEntry.Kind.VARIABLE);
-                System.out.println("Setting type: " + expressionType);
-                System.out.println("Setting value: " + expressionValue); 
-                System.out.println("Setting LineNumber: " + lineNumber);
+                System.out.println("Setting value: " + expressionValue + " to " + variableName); 
                 variableEntry.setType(expressionType);
                 variableEntry.setValue(expressionValue);
                 variableEntry.appendLineNumber(lineNumber);
                 idCtx.entry = variableEntry;
+                System.out.println(variableEntry.getValue());
             } 
             else 
             {
@@ -285,7 +289,7 @@ public class Semantics extends JavanaBaseVisitor<Object> {
         } 
         else if (ctx.identifier() != null) 
         {
-            SymTableEntry entry = ctx.identifier().entry;
+            SymTableEntry entry = symTableStack.lookup(ctx.getText());
             if (entry != null) 
             {
                 return entry.getValue();
@@ -322,7 +326,7 @@ public class Semantics extends JavanaBaseVisitor<Object> {
             {
                 Object leftValue = visit(ctx.expression(0));
                 Object rightValue = visit(ctx.expression(1));
-                System.out.println(leftValue + " of " + ctx.getText());
+                System.out.println(leftValue + " of " + rightValue);
                 if(leftValue == null || rightValue == null)
                 {
                     error.flag(SemanticErrorHandler.Code.UNDECLARED_IDENTIFIER, ctx);
@@ -350,6 +354,7 @@ public class Semantics extends JavanaBaseVisitor<Object> {
             else if (ctx.REL_OP() != null) 
             {
                 // Handle relational operator
+                
             } 
             else if (ctx.EQ_OP() != null) 
             {
@@ -453,7 +458,55 @@ public class Semantics extends JavanaBaseVisitor<Object> {
         {
             return visitRecordDecl(ctx.recordDecl());
         }
-        return null; // or throw an exception if you expect all cases to be handled
+        return null; 
+    }
+
+    @Override
+    public Object visitPrintLineStatement(PrintLineStatementContext ctx) {
+        if (ctx.printArgument() != null)
+        {
+            Object argumentValue = visit(ctx.printArgument());
+            System.out.println(argumentValue);
+        } 
+        else
+        {
+            System.out.println();
+        }
+        return null;
+    
+    }
+
+    @Override
+    public Object visitPrintStatement(PrintStatementContext ctx)
+    {
+        System.out.println("Visiting Print Statement " + ctx.getText());
+        if (ctx.printArgument() != null)
+        {
+            Object argumentValue = visit(ctx.printArgument());
+            System.out.println(argumentValue);
+        }
+        return null; 
+    }
+
+    @Override
+    public Object visitPrintArgument(PrintArgumentContext ctx)
+    {
+        System.out.println("Visiting Print ArgumentContext " + ctx.getText());
+        if (ctx.expression() != null)
+        {
+            return visit(ctx.expression());
+        } 
+        else if (ctx.exprList() != null) 
+        {
+            return visit(ctx.exprList());
+        }
+        return null;
+    }
+
+    @Override
+    public Object visitFunctionCall(FunctionCallContext ctx) {
+        System.out.println("FUNCTION CALL " + ctx.getText());
+        return super.visitFunctionCall(ctx);
     }
 
     @Override
@@ -486,5 +539,12 @@ public class Semantics extends JavanaBaseVisitor<Object> {
     public Object visitNameList(NameListContext ctx) {
         System.out.println("Visiting name list "+ ctx.getText() );
         return super.visitNameList(ctx);
+    }
+
+    @Override
+    public Object visitForStatement(ForStatementContext ctx)
+    {
+        System.out.println("Visiting for statement " + ctx.getText());
+        return super.visitForStatement(ctx);
     }
 }
