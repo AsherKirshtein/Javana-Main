@@ -1,0 +1,13 @@
+Javana Small:
+
+@main()
+{
+    var input = "Hello, World!"
+    var result = countCharacters(input)
+    println("Number of characters: " + result)
+}
+
+func countCharacters(input: string) -> int
+{
+    return input
+}

@@ -268,7 +268,6 @@
      public String getRecordTypePath() {
          return ((RecordInfo) info).typePath;
      }
- 
      /**
       * Set a record type's fully qualified type path.
       *

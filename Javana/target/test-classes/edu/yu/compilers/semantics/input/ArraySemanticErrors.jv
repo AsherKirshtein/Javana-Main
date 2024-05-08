@@ -1,0 +1,39 @@
+Javana ArrayErrors:
+    decl x, y: int[]
+    decl z : string[]
+
+    var g = @int[3]
+
+    @main() {
+
+        var a = @int[4]
+        var b = @string[4]
+        var c = @bool[4]
+
+
+        a[0] = a[1]
+        a[0] = b
+        a[0] = 1
+        
+        b[0] = c
+        b[0] = "hello world"
+        b[0] = false
+
+        print(1 + g[0])
+        
+
+        a[4 + 1] = a [2 - 1]
+
+        a[a[a[a[a[0]]]]] = a[a[4] + a[a[7]] - a[4]]
+
+        println(a["a"])
+        println(b[false])
+        
+
+        if(c[0]) {
+            var b = @bool[10]
+        }
+
+        if(b[0]) {}
+
+    }

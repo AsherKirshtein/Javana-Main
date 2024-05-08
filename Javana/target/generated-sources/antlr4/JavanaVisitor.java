@@ -139,11 +139,25 @@ public interface JavanaVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitAssignmentStatement(JavanaParser.AssignmentStatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link JavanaParser#identModifier}.
+	 * Visit a parse tree produced by {@link JavanaParser#variable}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitIdentModifier(JavanaParser.IdentModifierContext ctx);
+	T visitVariable(JavanaParser.VariableContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code varArrayIndexModfier}
+	 * labeled alternative in {@link JavanaParser#varModifier}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitVarArrayIndexModfier(JavanaParser.VarArrayIndexModfierContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code varRecordFieldModifier}
+	 * labeled alternative in {@link JavanaParser#varModifier}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitVarRecordFieldModifier(JavanaParser.VarRecordFieldModifierContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link JavanaParser#arrIdxSpecifier}.
 	 * @param ctx the parse tree
@@ -193,17 +207,138 @@ public interface JavanaVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitPrintLineStatement(JavanaParser.PrintLineStatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link JavanaParser#printArgument}.
+	 * Visit a parse tree produced by the {@code PrintSingleValue}
+	 * labeled alternative in {@link JavanaParser#printArgument}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitPrintArgument(JavanaParser.PrintArgumentContext ctx);
+	T visitPrintSingleValue(JavanaParser.PrintSingleValueContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link JavanaParser#expression}.
+	 * Visit a parse tree produced by the {@code FormattedPrint}
+	 * labeled alternative in {@link JavanaParser#printArgument}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExpression(JavanaParser.ExpressionContext ctx);
+	T visitFormattedPrint(JavanaParser.FormattedPrintContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ExprConditional}
+	 * labeled alternative in {@link JavanaParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprConditional(JavanaParser.ExprConditionalContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ExprNewRecord}
+	 * labeled alternative in {@link JavanaParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprNewRecord(JavanaParser.ExprNewRecordContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ExprRecordField}
+	 * labeled alternative in {@link JavanaParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprRecordField(JavanaParser.ExprRecordFieldContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ExprNot}
+	 * labeled alternative in {@link JavanaParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprNot(JavanaParser.ExprNotContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ExprReadChar}
+	 * labeled alternative in {@link JavanaParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprReadChar(JavanaParser.ExprReadCharContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ExprHigherArith}
+	 * labeled alternative in {@link JavanaParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprHigherArith(JavanaParser.ExprHigherArithContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ExprRelational}
+	 * labeled alternative in {@link JavanaParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprRelational(JavanaParser.ExprRelationalContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ExprReadLine}
+	 * labeled alternative in {@link JavanaParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprReadLine(JavanaParser.ExprReadLineContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ExprArrayElement}
+	 * labeled alternative in {@link JavanaParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprArrayElement(JavanaParser.ExprArrayElementContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ExprFunctionCall}
+	 * labeled alternative in {@link JavanaParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprFunctionCall(JavanaParser.ExprFunctionCallContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ExprArrayLength}
+	 * labeled alternative in {@link JavanaParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprArrayLength(JavanaParser.ExprArrayLengthContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ExprGroup}
+	 * labeled alternative in {@link JavanaParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprGroup(JavanaParser.ExprGroupContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ExprNewArray}
+	 * labeled alternative in {@link JavanaParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprNewArray(JavanaParser.ExprNewArrayContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ExprLiteral}
+	 * labeled alternative in {@link JavanaParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprLiteral(JavanaParser.ExprLiteralContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ExprArith}
+	 * labeled alternative in {@link JavanaParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprArith(JavanaParser.ExprArithContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ExprEquality}
+	 * labeled alternative in {@link JavanaParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprEquality(JavanaParser.ExprEqualityContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ExprVariable}
+	 * labeled alternative in {@link JavanaParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprVariable(JavanaParser.ExprVariableContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link JavanaParser#exprList}.
 	 * @param ctx the parse tree
@@ -241,23 +376,59 @@ public interface JavanaVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitNewRecord(JavanaParser.NewRecordContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link JavanaParser#varInitList}.
+	 * Visit a parse tree produced by {@link JavanaParser#fieldInitList}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitVarInitList(JavanaParser.VarInitListContext ctx);
+	T visitFieldInitList(JavanaParser.FieldInitListContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link JavanaParser#literal}.
+	 * Visit a parse tree produced by {@link JavanaParser#fieldInit}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLiteral(JavanaParser.LiteralContext ctx);
+	T visitFieldInit(JavanaParser.FieldInitContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link JavanaParser#type}.
+	 * Visit a parse tree produced by the {@code IntegerLiteral}
+	 * labeled alternative in {@link JavanaParser#literal}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitType(JavanaParser.TypeContext ctx);
+	T visitIntegerLiteral(JavanaParser.IntegerLiteralContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code BooleanLiteral}
+	 * labeled alternative in {@link JavanaParser#literal}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBooleanLiteral(JavanaParser.BooleanLiteralContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code StringLiteral}
+	 * labeled alternative in {@link JavanaParser#literal}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStringLiteral(JavanaParser.StringLiteralContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code NoneValue}
+	 * labeled alternative in {@link JavanaParser#literal}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNoneValue(JavanaParser.NoneValueContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code TypeScalar}
+	 * labeled alternative in {@link JavanaParser#type}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTypeScalar(JavanaParser.TypeScalarContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code TypeComposite}
+	 * labeled alternative in {@link JavanaParser#type}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTypeComposite(JavanaParser.TypeCompositeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link JavanaParser#scalarType}.
 	 * @param ctx the parse tree

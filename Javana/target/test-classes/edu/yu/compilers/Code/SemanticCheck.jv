@@ -1,0 +1,23 @@
+Javana SemanticCheck:
+
+@main()
+{
+    var added = add(5, 3)
+    var subtracted = subtract(10, 5) //not defined should throw error
+    var x = 10
+    var y  = true // should throw mismatch type error
+    var boolaen = boolcheck(2,4)
+    var d = 10
+    var e = (d && true) // should throw type mismatch error
+}
+
+func add(a: int, b: int) -> int 
+{ 
+    return a + b     
+}
+
+func boolcheck(a: int, b: int) -> bool
+{
+    var c = (a < b)
+    return c
+}

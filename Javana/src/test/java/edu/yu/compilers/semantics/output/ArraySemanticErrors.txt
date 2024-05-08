@@ -1,0 +1,11 @@
+
+===== SEMANTIC ERRORS =====
+
+Line Message                                  Found near
+---- -------                                  ----------
+015  Incompatible assignment                  "a[0]=b"
+018  Incompatible assignment                  "b[0]=c"
+020  Incompatible assignment                  "b[0]=false"
+029  Datatype must be integer                 ""a""
+030  Datatype must be integer                 "false"
+037  Datatype must be boolean                 "b[0]"

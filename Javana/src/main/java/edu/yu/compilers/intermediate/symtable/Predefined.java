@@ -8,6 +8,7 @@ import static edu.yu.compilers.intermediate.symtable.SymTableEntry.Kind.*;
 import static edu.yu.compilers.intermediate.symtable.SymTableEntry.Routine.*;
 import static edu.yu.compilers.intermediate.type.Typespec.Form.*;
 
+import java.lang.ProcessBuilder.Redirect.Type;
 import java.util.ArrayList;
 
 public class Predefined {
@@ -18,6 +19,10 @@ public class Predefined {
     public static Typespec charType;
     public static Typespec stringType;
     public static Typespec undefinedType;
+    
+    public static Typespec stringArrType;
+    public static Typespec integerArrType;
+    public static Typespec booleanArrType;
 
     // Predefined identifiers.
     public static SymTableEntry integerId;
@@ -31,6 +36,10 @@ public class Predefined {
     public static SymTableEntry printlnId;
     public static SymTableEntry readId;
     public static SymTableEntry readlnId;
+
+    public static SymTableEntry stringArrayId;
+    public static SymTableEntry integerArrayId;
+    public static SymTableEntry booleanArrayId;
 
     /**
      * Initialize a symbol table stack with predefined identifiers.
@@ -81,6 +90,24 @@ public class Predefined {
 
         // Undefined type.
         undefinedType = new Typespec(SCALAR);
+
+        //Type stringArray
+        stringArrayId = symTableStack.enterLocal("STR_TYPE '[' ']'", TYPE);
+        stringArrType = new Typespec(ARRAY);
+        stringArrType.setIdentifier(stringArrayId);
+        stringArrayId.setType(stringArrType);
+
+        //Type integerArray
+        integerArrayId = symTableStack.enterLocal("INT_TYPE '[' ']' ", TYPE);
+        integerArrType = new Typespec(ARRAY);
+        integerArrType.setIdentifier(integerArrayId);
+        integerArrayId.setType(integerArrType);
+
+        //Type booleanArray
+        booleanArrayId = symTableStack.enterLocal("BOOL_TYPE '[' ']", TYPE);
+        booleanArrType = new Typespec(ARRAY);
+        booleanArrType.setIdentifier(booleanArrayId);
+        booleanArrayId.setType(booleanArrType);
     }
 
     /**

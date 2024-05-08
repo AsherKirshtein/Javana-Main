@@ -1,0 +1,11 @@
+
+===== SEMANTIC ERRORS =====
+
+Line Message                                  Found near
+---- -------                                  ----------
+009  Redeclared identifier                    "z"
+013  Datatype must be boolean                 "y+10"
+014  Datatype must be integer                 "y"
+014  Incompatible comparison                  "y<10"
+014  Datatype must be integer                 "y"
+021  Redeclared identifier                    "y"

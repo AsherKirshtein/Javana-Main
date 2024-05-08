@@ -1,0 +1,9 @@
+Javana CrystalHelloWorld:
+
+@main() {
+    decl a, b, redeclared : int
+    decl redeclared, c : int
+
+    println("Hello, World!")
+    println(undeclared)
+}

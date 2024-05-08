@@ -1,0 +1,12 @@
+Javana Scope:
+    @main()
+    {
+        var a = 10
+        var b = 0
+        for(var a = 0; a < 10; a + 1)
+        {
+            var b = 10
+            var c = 15
+        }
+        println(c)
+    }

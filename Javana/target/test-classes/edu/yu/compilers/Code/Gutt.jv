@@ -1,0 +1,25 @@
+Javana Gutt:
+
+@main() {
+    // Redeclared Identifier Error
+    var age = 25
+    var age = 30 // Triggers REDECLARED_IDENTIFIER error.
+
+    // Undeclared Identifier Error
+    name = "John" // Triggers UNDECLARED_IDENTIFIER error as 'name' is not declared before use.
+
+    // Incompatible Assignment Error for Constants
+    const pi = 314
+    pi = 314159 // This should trigger an INCOMPATIBLE_ASSIGNMENT error or a similar error related to constants.
+
+    // Incompatible Assignment (assuming Javana is statically typed for this example)
+    var totalScores = 100 // Assuming integer type based on assignment.
+    totalScores = totalScores + 10 // Triggers TYPE_MISMATCH or INCOMPATIBLE_ASSIGNMENT error due to attempting to add a string to an integer.
+
+ 
+
+    println(age)
+    println(name)
+    println(totalScores)
+    println(isPassing)
+}

@@ -1,0 +1,12 @@
+
+===== SEMANTIC ERRORS =====
+
+Line Message                                  Found near
+---- -------                                  ----------
+008  Incompatible comparison                  "x=="a""
+013  Undeclared identifier                    "d"
+015  Datatype must be boolean                 "x"
+019  Datatype must be integer                 ""a""
+035  Undeclared identifier                    "d"
+037  Undeclared identifier                    "d"
+039  Undeclared identifier                    "d"

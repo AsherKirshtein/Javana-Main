@@ -259,6 +259,10 @@ public class CrossReferencer {
      * @return the string.
      */
     private String toString(Object value, Typespec type) {
+        if(value == null)
+        {
+            return value + " was initialized wrong it has a null type THIS IS AN ERROR YOU NEED TO FIX THIS :(";
+        }
         return type == Predefined.stringType ? "'" + value + "'" : value.toString();
     }
 }

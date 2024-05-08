@@ -1,0 +1,16 @@
+Javana SampleProgram:
+
+decl globalVar : int
+
+func modifyValue() -> int
+{
+
+    localVar = 100
+}
+
+
+@main () {
+    var localVar = 10
+    modifyValue()
+
+}

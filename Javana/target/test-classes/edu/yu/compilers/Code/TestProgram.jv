@@ -1,0 +1,28 @@
+Javana TestProgram:
+
+// Global variable declaration
+decl globalVar: int
+
+// Function definition with no return type (using 'None')
+func initialize() -> None
+{
+    globalVar = 0
+}
+
+// Function with arguments and a return type
+func addValues(a: int, b: int) -> int
+{
+    var result = a + b
+    return result
+}
+
+// Main method which uses the functions and variables defined
+@main(args: string[])
+{
+    initialize()
+    var sum = addValues(5, 10)
+    //var localArray = ["Hello", "World"]
+
+    // Use the local array
+   // var firstWord = localArray[0]
+}
